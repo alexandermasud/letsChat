@@ -2,14 +2,23 @@
   background-color: white;
 }
 .card-header {
-  background-color: #38be76;
+  background-color: #38c06f;
 }
 .card {
   color: #fff;
 }
 
 .card-body {
-  background-color: #5ad091;
+  background-color: white;
+  padding: 0px;
+}
+
+.card-body-index {
+  background-color: #1ab358;
+}
+
+.card-footer {
+  background-color: #38c06f;
 }
 
 .btn-default {
@@ -25,4 +34,38 @@
 .btn-danger {
   background-color: #ff6d4b;
   color: white;
+}
+
+.aside {
+  background-color: #38c06f;
+  padding: 0px;
+  padding-left: 20px;
+  padding-top: 20px;
+  margin-left: 0px;
+  text-align: left;
+}
+
+.weirdrow {
+  margin: 0px;
+  min-height: 400px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+#room-name {
+  background-color: #1ab358;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-right: 20px;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.message {
+  color: black;
 }
