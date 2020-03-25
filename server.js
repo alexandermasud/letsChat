@@ -29,7 +29,7 @@ io.on("connection", socket => {
     // Runs on connecting client
     socket.emit(
       "message",
-      formatMessage(botName, `Välkommen ${user.username} till letsChat!`)
+      formatMessage("", botName, `Välkommen ${user.username} till letsChat!`)
     );
 
     // Broadcast when a user connects to all already connected clients
@@ -38,6 +38,7 @@ io.on("connection", socket => {
       .emit(
         "message",
         formatMessage(
+          "",
           botName,
           `${user.username} har anslutit sig till chatten! `
         )
@@ -55,7 +56,10 @@ io.on("connection", socket => {
   socket.on("chatMessage", msg => {
     const user = getCurrentUser(socket.id);
 
-    io.to(user.room).emit("message", formatMessage(user.username, msg));
+    io.to(user.room).emit(
+      "message",
+      formatMessage(socket.id, user.username, msg)
+    );
   });
 
   // Runs when client disconnects to all clients
@@ -65,7 +69,7 @@ io.on("connection", socket => {
     if (user) {
       io.to(user.room).emit(
         "message",
-        formatMessage(botName, `${user.username} har lämnat chatten`)
+        formatMessage("", botName, `${user.username} har lämnat chatten`)
       );
       io.to(user.room).emit("roomUsers", {
         room: user.room,

@@ -48,12 +48,26 @@ chatForm.addEventListener("submit", e => {
 const outputMessage = message => {
   const div = document.createElement("div");
   div.classList.add("message");
-  div.innerHTML = `  <p class="meta">${message.username} <span>${message.time}</span></p>
+
+  if (message.id === socket.id) {
+    div.innerHTML = `   
+    <style>
+    .myMessage {background-color:#FF795D;}
+    </style>
+    <div class="myMessage">
+    <p class="meta">${message.username}<span>${message.time}</span></p>
+    <p class="text">
+      ${message.text}
+    </p>
+    </div>`;
+    document.querySelector(".chat-messages").appendChild(div);
+  } else {
+    div.innerHTML = `  <p class="meta">${message.username} <span>${message.time}</span></p>
     <p class="text">
       ${message.text}
     </p>`;
-
-  document.querySelector(".chat-messages").appendChild(div);
+    document.querySelector(".chat-messages").appendChild(div);
+  }
 };
 
 // Add room name to DOM
