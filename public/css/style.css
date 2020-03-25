@@ -2,7 +2,7 @@
   background-color: white;
 }
 .card-header {
-  background-color: #38c06f;
+  background-color: #6bd593;
 }
 .card {
   color: #fff;
@@ -14,7 +14,7 @@
 }
 
 .card-body-index {
-  background-color: #1ab358;
+  background-image: linear-gradient(#6bd593, #38c06f);
 }
 
 .card-index {
@@ -27,7 +27,7 @@
 }
 
 .btn-default {
-  background-color: #6189c9;
+  background-color: #428daa;
   color: white;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .aside {
-  background-color: #38c06f;
+  background-image: linear-gradient(#6bd593, #38c06f);
   padding: 0px;
   padding-left: 20px;
   padding-top: 20px;
@@ -60,8 +60,7 @@ h3 {
 }
 
 #room-name {
-  background-color: #1ab358;
-  padding-left: 10px;
+  padding-left: 38px;
   padding-top: 5px;
   padding-bottom: 5px;
   margin-right: 20px;
@@ -72,11 +71,38 @@ ul li {
 }
 
 .message {
-  background-color: #1ab358;
+  margin-bottom: 10px;
+}
+
+.notMyMessage {
+  background-color: #38c06f;
+  border-radius: 10px;
+  padding: 10px;
+}
+.myMessage {
+  background-color: #ff795d;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .chat-messages {
   padding: 30px;
   max-height: 400px;
   overflow-y: scroll;
+}
+
+.h1Chat {
+  font-size: 27px;
+}
+
+.btn-default:hover {
+  color: white;
+}
+
+.chatInput {
+  margin-bottom: 0px;
+}
+
+.participants {
+  margin-top: 40px;
 }

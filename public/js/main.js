@@ -52,20 +52,40 @@ const outputMessage = message => {
   if (message.id === socket.id) {
     div.innerHTML = `   
     <style>
-    .myMessage {background-color:#FF795D;}
+    .myMessage 
+    {
+
+
+      background-image: linear-gradient(#FFB15D, #FF795D);
+      float: right;
+      width: 90%;
+      margin-bottom: 10px;
+    }
     </style>
     <div class="myMessage">
-    <p class="meta">${message.username}<span>${message.time}</span></p>
+    <p class="meta">${message.username} <span>${message.time}</span></p>
     <p class="text">
       ${message.text}
     </p>
     </div>`;
     document.querySelector(".chat-messages").appendChild(div);
   } else {
-    div.innerHTML = `  <p class="meta">${message.username} <span>${message.time}</span></p>
+    div.innerHTML = ` 
+    <style>
+    .notMyMessage {
+      
+      background-image: linear-gradient(#6BD593, #428DAA);
+      float: left;
+      width: 90%;
+      margin-bottom: 10px;
+    }
+    </style>
+    <div class="notMyMessage">
+    <p class="meta">${message.username} <span>${message.time}</span></p>
     <p class="text">
       ${message.text}
-    </p>`;
+    </p>
+    </div>`;
     document.querySelector(".chat-messages").appendChild(div);
   }
 };
