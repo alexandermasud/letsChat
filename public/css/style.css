@@ -17,6 +17,11 @@
   background-color: #1ab358;
 }
 
+.card-index {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
 .card-footer {
   background-color: #38c06f;
 }
@@ -67,5 +72,11 @@ ul li {
 }
 
 .message {
-  color: black;
+  background-color: #1ab358;
+}
+
+.chat-messages {
+  padding: 30px;
+  max-height: 400px;
+  overflow-y: scroll;
 }
