@@ -64,6 +64,7 @@ h3 {
   padding-top: 5px;
   padding-bottom: 5px;
   margin-right: 20px;
+  font-size: 25px;
 }
 
 ul li {
@@ -105,4 +106,10 @@ ul li {
 
 .participants {
   margin-top: 40px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .form-input-fix {
+    min-height: 63px;
+  }
 }

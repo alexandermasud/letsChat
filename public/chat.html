@@ -24,16 +24,20 @@
     <div class="container mt-5">
       <div class="card ">
         <div class="card-header">
-          <h1 class="float-left h1Chat">
-            <i class="fas fa-comment-dots"></i> letsChat
-          </h1>
-          <a href="index.html" class="btn btn-default float-right"
-            >Lämna chattrummet</a
-          >
+          <div class="row">
+            <h1 class="float-left h1Chat col-12 col-xs-12 col-sm-8 col-md-6">
+              <i class="fas fa-comment-dots"></i> letsChat
+            </h1>
+            <a
+              href="index.html"
+              class="btn btn-default float-right col-12 col-xs-12 col-sm-4 col-md-6"
+              >Lämna chattrummet</a
+            >
+          </div>
         </div>
         <div class="card-body">
           <div class="row weirdrow">
-            <div class="col col-3 aside">
+            <div class="col col-md-3 col-12 aside">
               <h3><i class="fas fa-comments"></i> Chattrum:</h3>
               <h2 id="room-name"></h2>
               <h3 class="participants">
@@ -42,7 +46,7 @@
               <ul id="users"></ul>
             </div>
 
-            <div class="col col-9">
+            <div class="col col-md-9 col-12">
               <div class="chat-messages"></div>
             </div>
           </div>
@@ -50,19 +54,19 @@
         <div class="card-footer">
           <form id="chat-form">
             <div class="row">
-              <div class="col col-10">
+              <div class="col col-12 col-sm-12 col-md-10">
                 <div class="form-group chatInput">
                   <input
                     id="msg"
                     type="text"
-                    class="form-control"
+                    class="form-control form-input-fix"
                     placeholder="Skriv något ..."
                     required
                     autocomplete="off"
                   />
                 </div>
               </div>
-              <div class="col col2">
+              <div class="col col-12 col-sm-12 col-md-2">
                 <button class="btn btn-default btn-block float-right">
                   <i class="fas fa-paper-plane"></i> Skicka
                 </button>
